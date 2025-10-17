@@ -1,0 +1,7 @@
+[
+  { "type": "Light", "brand": "Philips", "name": "living-light-1", "decorators": ["Voice", "Remote"] },
+  { "type": "Thermostat", "brand": "Xiaomi", "name": "hall-thermo", "decorators": ["Energy"] },
+  { "type": "MusicSystem", "brand": "Philips", "name": "living-music", "decorators": ["Voice", "Remote"] },
+  { "type": "SecurityCamera", "brand": "Xiaomi", "name": "door-cam", "decorators": ["Remote"] },
+  { "type": "Light", "brand": "Xiaomi", "name": "living-light-2", "decorators": ["Voice", "Remote"] }
+]
