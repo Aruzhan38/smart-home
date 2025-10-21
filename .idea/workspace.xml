@@ -4,17 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0650c769-86c0-4332-8916-3f03f522adb0" name="Changes" comment="">
+    <list default="true" id="0650c769-86c0-4332-8916-3f03f522adb0" name="Changes" comment="Second commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/CommandRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/ModeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/RequestParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/RequestType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/exception/ExitRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/exception/InvalidRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/exception/UnknownRequestTypeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/handler/CommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/handler/ModeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/assemble/DeviceAssembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/config/DeviceConfigLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/config/JsonAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/config/JsonDevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/config/JsonMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/config/ModeConfigLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/modes/ModeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/registry/DeviceRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/device/DeviceType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/test2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/core/SmartHomeFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/SmartHomeFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/device/DeviceType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/device/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/device/Light.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/decorator/EnergySavingDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/decorator/EnergySavingDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/decorator/RemoteAccessDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/decorator/RemoteAccessDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/decorator/VoiceControlDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/decorator/VoiceControlDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/factory/DeviceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/factory/DeviceFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/factory/PhilipsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/factory/PhilipsFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/factory/XiaomiFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/factory/XiaomiFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/devices.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/devices.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/modes.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/modes.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +42,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -99,11 +118,25 @@
       <workItem from="1760898281829" duration="14000" />
       <workItem from="1761025812940" duration="7888000" />
       <workItem from="1761044026027" duration="3217000" />
-      <workItem from="1761049016964" duration="1447000" />
+      <workItem from="1761049016964" duration="1620000" />
+      <workItem from="1761061857818" duration="12469000" />
     </task>
+    <task id="LOCAL-00001" summary="Second commit">
+      <option name="closed" value="true" />
+      <created>1761050774292</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761050774292</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
   </component>
 </project>
