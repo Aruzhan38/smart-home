@@ -16,4 +16,8 @@ public abstract class DeviceDecorator implements Device {
     public void operate(String action) {
         decorated.operate(action);
     }
+
+    public Device wrapped() {
+        return decorated;
+    }
 }

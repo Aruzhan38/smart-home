@@ -15,4 +15,8 @@
 {"type":"command","deviceId":"unknown-device","action":"ON"}
 {"type":"mode","name":"NonExistingMode"}
 
+{"type":"command","deviceId":"living-light-1","voice":"turn off"}
+{"type":"command","deviceId":"door-cam","online":false}
+{"type":"command","deviceId":"door-cam","action":"RECORD"}
+
 EXIT

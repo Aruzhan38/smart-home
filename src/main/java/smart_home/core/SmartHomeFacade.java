@@ -37,14 +37,45 @@ public class SmartHomeFacade {
         for (Device d : registry.all()) System.out.println(" - " + d.getName());
     }
 
-    public void control(String nameOrId, String action) {
-        if (nameOrId == null || action == null) return;
-        var d = registry.get(nameOrId);
+    private static <T> T findCapability(smart_home.device.Device d, Class<T> cap) {
+        var cur = d;
+        while (true) {
+            if (cap.isInstance(cur)) return cap.cast(cur);
+            if (cur instanceof smart_home.decorator.DeviceDecorator dec) cur = dec.wrapped();
+            else return null;
+        }
+    }
+
+    public void control(String id, String action) {
+        control(id, action, null, null, null);
+    }
+
+    public void control(String id, String action, String voice, Boolean energy, Boolean online) {
+        if (id == null) return;
+        var d = registry.get(id);
         if (d == null) {
-            System.out.println("Device not found: " + nameOrId);
+            System.out.println("Device not found: " + id);
             return;
         }
-        d.operate(action);
+        if (voice != null) {
+            var v = findCapability(d, smart_home.device.capabilities.SupportsVoice.class);
+            if (v != null) v.voiceCommand(voice);
+            else System.out.println("Voice not supported by " + id);
+            return;
+        }
+        if (energy != null) {
+            var e = findCapability(d, smart_home.device.capabilities.SupportsEnergyMode.class);
+            if (e != null) e.toggleEnergyMode(energy);
+            else System.out.println("Energy mode not supported by " + id);
+            return;
+        }
+        if (online != null) {
+            var r = findCapability(d, smart_home.device.capabilities.SupportsRemote.class);
+            if (r != null) r.setOnline(online);
+            else System.out.println("Remote not supported by " + id);
+            return;
+        }
+        if (action != null) d.operate(action);
     }
 
     public void activateMode(String name) {

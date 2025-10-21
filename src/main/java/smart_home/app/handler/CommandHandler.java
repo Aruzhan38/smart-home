@@ -13,11 +13,14 @@ public class CommandHandler {
     public CommandHandler(SmartHomeFacade hub) { this.hub = hub; }
 
     public String handle(CommandRequest req) {
-        hub.control(req.deviceId(), req.action());
+        hub.control(req.deviceId(), req.action(), req.voice(), req.energy(), req.online());
         Map<String,Object> ok = new HashMap<>();
         ok.put("status","ok");
         ok.put("deviceId", req.deviceId());
-        ok.put("action", req.action());
+        if (req.action()!=null) ok.put("action", req.action());
+        if (req.voice()!=null) ok.put("voice", req.voice());
+        if (req.energy()!=null) ok.put("energy", req.energy());
+        if (req.online()!=null) ok.put("online", req.online());
         return gson.toJson(ok);
     }
 }

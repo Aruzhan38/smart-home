@@ -1,24 +1,25 @@
 package smart_home.decorator;
 
 import smart_home.device.Device;
+import smart_home.device.capabilities.SupportsEnergyMode;
 
-public class EnergySavingDecorator extends DeviceDecorator {
-    private boolean energyMode = false;
+public class EnergySavingDecorator extends DeviceDecorator implements SupportsEnergyMode {
+    private boolean energy = false;
 
-    public EnergySavingDecorator(Device d) {
-        super(d);
+    public EnergySavingDecorator(Device d) { super(d); }
+
+    @Override
+    public void toggleEnergyMode(boolean on) {
+        energy = on;
+        System.out.println("[Energy] " + (on ? "ON" : "OFF"));
     }
 
     @Override
     public void operate(String action) {
-        if (action.equalsIgnoreCase("ON") && energyMode) {
-            System.out.println("[EnergySaving] Reducing brightness or power usage...");
+        if (energy && action.equalsIgnoreCase("ON")) {
+            System.out.println("[Energy] Reducing power/brightness...");
         }
+        System.out.println("[EnergySaving]");
         super.operate(action);
-    }
-
-    public void toggleEnergyMode(boolean enabled) {
-        this.energyMode = enabled;
-        System.out.println("Energy saving mode is now " + (enabled ? "ON" : "OFF"));
     }
 }

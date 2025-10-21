@@ -30,13 +30,20 @@ public class RequestParser {
     }
 
     private CommandRequest parseCommand(JsonObject json) {
-        if (!json.has(K_DEVICE_ID) || !json.has(K_ACTION))
-            throw new InvalidRequestException("MISSING_FIELDS");
-        return new CommandRequest(
-                json.get(K_DEVICE_ID).getAsString(),
-                json.get(K_ACTION).getAsString()
-        );
+        if (!json.has("deviceId")) throw new InvalidRequestException("MISSING_DEVICE_ID");
+        String id = json.get("deviceId").getAsString();
+
+        String action = json.has("action") ? json.get("action").getAsString() : null;
+        String voice  = json.has("voice")  ? json.get("voice").getAsString()  : null;
+        Boolean energy = json.has("energy") ? json.get("energy").getAsBoolean() : null;
+        Boolean online = json.has("online") ? json.get("online").getAsBoolean() : null;
+
+        if (action == null && voice == null && energy == null && online == null)
+            throw new InvalidRequestException("NO_COMMAND_FIELDS");
+
+        return new CommandRequest(id, action, voice, energy, online);
     }
+
 
     private ModeRequest parseMode(JsonObject json) {
         if (!json.has(K_NAME)) throw new InvalidRequestException("MISSING_MODE_NAME");

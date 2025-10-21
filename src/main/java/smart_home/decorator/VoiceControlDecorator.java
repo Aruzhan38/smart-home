@@ -1,34 +1,29 @@
 package smart_home.decorator;
 
 import smart_home.device.Device;
+import smart_home.device.capabilities.SupportsVoice;
 
-import java.util.HashMap;
-import java.util.Map;
+public class VoiceControlDecorator extends DeviceDecorator implements SupportsVoice {
+    public VoiceControlDecorator(Device d) { super(d); }
 
-public class VoiceControlDecorator extends DeviceDecorator {
-    private final Map<String, String> voiceCommands = new HashMap<>();
-
-    public VoiceControlDecorator(Device d) {
-        super(d);
-        voiceCommands.put("turn on", "ON");
-        voiceCommands.put("turn off", "OFF");
-        voiceCommands.put("play music", "PLAY");
-        voiceCommands.put("stop music", "STOP");
-    }
-
-    public void voiceCommand(String command) {
-        String action = voiceCommands.get(command.toLowerCase());
-        if (action != null) {
-            System.out.println("[Voice] Recognized: " + command);
-            super.operate(action);
-        } else {
-            System.out.println("[Voice] Unknown command: " + command);
-        }
+    @Override
+    public void voiceCommand(String phrase) {
+        System.out.println("[Voice] " + phrase);
+        String mapped = switch (phrase.toLowerCase()) {
+            case "turn on"     -> "ON";
+            case "turn off"    -> "OFF";
+            case "play music"  -> "PLAY";
+            case "stop music"  -> "STOP";
+            case "record"      -> "RECORD";
+            default            -> null;
+        };
+        if (mapped != null) super.operate(mapped);
+        else System.out.println("[Voice] Unknown phrase");
     }
 
     @Override
     public void operate(String action) {
-        System.out.println("[VoiceControl]");
+        System.out.println("[Voice]");
         super.operate(action);
     }
 }
