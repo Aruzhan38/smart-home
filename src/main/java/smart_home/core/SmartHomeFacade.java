@@ -7,6 +7,9 @@ import smart_home.core.config.ModeConfigLoader;
 import smart_home.core.modes.ModeService;
 import smart_home.core.registry.DeviceRegistry;
 import smart_home.device.Device;
+import smart_home.core.util.Capabilities;
+import smart_home.device.capabilities.*;
+
 
 import java.util.List;
 import java.util.Map;
@@ -37,40 +40,25 @@ public class SmartHomeFacade {
         for (Device d : registry.all()) System.out.println(" - " + d.getName());
     }
 
-    private static <T> T findCapability(smart_home.device.Device d, Class<T> cap) {
-        var cur = d;
-        while (true) {
-            if (cap.isInstance(cur)) return cap.cast(cur);
-            if (cur instanceof smart_home.decorator.DeviceDecorator dec) cur = dec.wrapped();
-            else return null;
-        }
-    }
-
-    public void control(String id, String action) {
-        control(id, action, null, null, null);
-    }
-
     public void control(String id, String action, String voice, Boolean energy, Boolean online) {
         if (id == null) return;
         var d = registry.get(id);
-        if (d == null) {
-            System.out.println("Device not found: " + id);
-            return;
-        }
+        if (d == null) { System.out.println("Device not found: " + id); return; }
+
         if (voice != null) {
-            var v = findCapability(d, smart_home.device.capabilities.SupportsVoice.class);
+            var v = Capabilities.find(d, SupportsVoice.class);
             if (v != null) v.voiceCommand(voice);
             else System.out.println("Voice not supported by " + id);
             return;
         }
         if (energy != null) {
-            var e = findCapability(d, smart_home.device.capabilities.SupportsEnergyMode.class);
+            var e = Capabilities.find(d, SupportsEnergyMode.class);
             if (e != null) e.toggleEnergyMode(energy);
             else System.out.println("Energy mode not supported by " + id);
             return;
         }
         if (online != null) {
-            var r = findCapability(d, smart_home.device.capabilities.SupportsRemote.class);
+            var r = Capabilities.find(d, SupportsRemote.class);
             if (r != null) r.setOnline(online);
             else System.out.println("Remote not supported by " + id);
             return;

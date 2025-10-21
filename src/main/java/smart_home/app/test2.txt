@@ -1,3 +1,4 @@
+// simple commands
 {"type":"command","deviceId":"living-light-1","action":"ON"}
 {"type":"command","deviceId":"bedroom-light","action":"ON"}
 {"type":"command","deviceId":"kitchen-light","action":"SET BRIGHTNESS 70"}
@@ -5,6 +6,7 @@
 {"type":"command","deviceId":"living-music","action":"PLAY"}
 {"type":"command","deviceId":"door-cam","action":"RECORD"}
 
+// mode
 {"type":"mode","name":"Night"}
 {"type":"mode","name":"Party"}
 {"type":"mode","name":"LeavingHome"}
@@ -12,11 +14,22 @@
 {"type":"command","deviceId":"garden-cam","action":"RECORD"}
 {"type":"command","deviceId":"bedroom-music","action":"OFF"}
 
+ //error
 {"type":"command","deviceId":"unknown-device","action":"ON"}
 {"type":"mode","name":"NonExistingMode"}
 
+// decorators
 {"type":"command","deviceId":"living-light-1","voice":"turn off"}
 {"type":"command","deviceId":"door-cam","online":false}
+{"type":"command","deviceId":"door-cam","action":"RECORD"}
+
+{"type":"command","deviceId":"living-light-1","voice":"turn on"}
+{"type":"command","deviceId":"living-light-1","energy":true}
+{"type":"command","deviceId":"living-light-1","action":"ON"}
+
+{"type":"command","deviceId":"door-cam","online":false}
+{"type":"command","deviceId":"door-cam","action":"RECORD"}
+{"type":"command","deviceId":"door-cam","online":true}
 {"type":"command","deviceId":"door-cam","action":"RECORD"}
 
 EXIT

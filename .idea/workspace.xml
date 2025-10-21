@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0650c769-86c0-4332-8916-3f03f522adb0" name="Changes" comment="Third commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/device/capabilities/SupportsEnergyMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/device/capabilities/SupportsRemote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/device/capabilities/SupportsVoice.java" afterDir="false" />
+    <list default="true" id="0650c769-86c0-4332-8916-3f03f522adb0" name="Changes" comment="Fourth commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/util/Capabilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/CommandRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/CommandRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/RequestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/RequestParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/handler/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/handler/CommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/test2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/core/SmartHomeFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/SmartHomeFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/decorator/DeviceDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/decorator/DeviceDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/decorator/EnergySavingDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/decorator/EnergySavingDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/decorator/RemoteAccessDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/decorator/RemoteAccessDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/decorator/VoiceControlDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/decorator/VoiceControlDecorator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -103,7 +95,7 @@
       <workItem from="1761025812940" duration="7888000" />
       <workItem from="1761044026027" duration="3217000" />
       <workItem from="1761049016964" duration="1620000" />
-      <workItem from="1761061857818" duration="13854000" />
+      <workItem from="1761061857818" duration="15712000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <option name="closed" value="true" />
@@ -121,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761078912192</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fourth commit">
+      <option name="closed" value="true" />
+      <created>1761080457463</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761080457463</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +130,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Second commit" />
     <MESSAGE value="Third commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Third commit" />
+    <MESSAGE value="Fourth commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fourth commit" />
   </component>
 </project>
