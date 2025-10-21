@@ -1,10 +1,18 @@
 {"type":"command","deviceId":"living-light-1","action":"ON"}
-{"type":"command","deviceId":"hall-thermo","action":"SET 24"}
+{"type":"command","deviceId":"bedroom-light","action":"ON"}
+{"type":"command","deviceId":"kitchen-light","action":"SET BRIGHTNESS 70"}
+{"type":"command","deviceId":"hall-thermo","action":"SET 23"}
 {"type":"command","deviceId":"living-music","action":"PLAY"}
 {"type":"command","deviceId":"door-cam","action":"RECORD"}
 
 {"type":"mode","name":"Night"}
 {"type":"mode","name":"Party"}
 {"type":"mode","name":"LeavingHome"}
+
+{"type":"command","deviceId":"garden-cam","action":"RECORD"}
+{"type":"command","deviceId":"bedroom-music","action":"OFF"}
+
+{"type":"command","deviceId":"unknown-device","action":"ON"}
+{"type":"mode","name":"NonExistingMode"}
 
 EXIT

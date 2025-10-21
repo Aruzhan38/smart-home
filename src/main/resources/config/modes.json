@@ -1,5 +1,25 @@
 [
-  { "name": "Night" },
-  { "name": "Party" },
-  { "name": "LeavingHome" }
+  {
+    "name": "Night",
+    "actions": [
+      { "deviceType": "light", "action": "OFF" },
+      { "deviceType": "thermostat", "action": "SET 19" },
+      { "deviceType": "securitycamera", "action": "RECORD" }
+    ]
+  },
+  {
+    "name": "Party",
+    "actions": [
+      { "deviceType": "light", "action": "SET BRIGHTNESS 90" },
+      { "deviceType": "musicsystem", "action": "PLAY" }
+    ]
+  },
+  {
+    "name": "LeavingHome",
+    "actions": [
+      { "deviceType": "light", "action": "OFF" },
+      { "deviceType": "musicsystem", "action": "OFF" },
+      { "deviceType": "securitycamera", "action": "RECORD" }
+    ]
+  }
 ]

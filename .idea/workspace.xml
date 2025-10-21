@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0650c769-86c0-4332-8916-3f03f522adb0" name="Changes" comment="" />
+    <list default="true" id="0650c769-86c0-4332-8916-3f03f522adb0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/test2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/core/SmartHomeFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/SmartHomeFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/device/DeviceType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/device/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/device/Light.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/factory/PhilipsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/factory/PhilipsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/factory/XiaomiFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/factory/XiaomiFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/devices.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/devices.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/modes.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/modes.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +29,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Aruzhan38&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Aruzhan38/smart-home.git&quot;,
+    &quot;accountId&quot;: &quot;ea6e0efd-1c6d-4fb3-8a58-1ba73cfa3410&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -35,6 +61,8 @@
     &quot;Application.SmartHome.executor&quot;: &quot;Run&quot;,
     &quot;Maven.smart-home [package].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/асер/IdeaProjects/SmartHomeNew&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -68,6 +96,10 @@
       <workItem from="1760589692527" duration="2380000" />
       <workItem from="1760637674716" duration="497000" />
       <workItem from="1760698385301" duration="2312000" />
+      <workItem from="1760898281829" duration="14000" />
+      <workItem from="1761025812940" duration="7888000" />
+      <workItem from="1761044026027" duration="3217000" />
+      <workItem from="1761049016964" duration="1447000" />
     </task>
     <servers />
   </component>
