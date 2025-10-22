@@ -5,6 +5,7 @@ import smart_home.app.exception.InvalidRequestException;
 import smart_home.app.exception.UnknownRequestTypeException;
 import smart_home.app.handler.CommandHandler;
 import smart_home.app.handler.ModeHandler;
+import smart_home.app.handler.RoomHandler;
 import smart_home.core.SmartHomeFacade;
 
 import java.util.HashMap;
@@ -21,10 +22,12 @@ public class Main {
         hub.loadDevices(CFG_DEVICES);
         hub.loadModes(CFG_MODES);
         hub.showDevices();
+        hub.showRooms();
 
         RequestParser parser = new RequestParser();
         CommandHandler command = new CommandHandler(hub);
         ModeHandler mode = new ModeHandler(hub);
+        RoomHandler room = new RoomHandler(hub);
         Gson gson = new Gson();
 
         try (Scanner sc = new Scanner(System.in)) {
@@ -36,6 +39,7 @@ public class Main {
                     String out = switch (req.type()) {
                         case COMMAND -> command.handle((CommandRequest) req);
                         case MODE    -> mode.handle((ModeRequest) req);
+                        case ROOM    -> room.handle((RoomRequest) req);
                     };
                     System.out.println(out);
                 } catch (ExitRequestException e) {

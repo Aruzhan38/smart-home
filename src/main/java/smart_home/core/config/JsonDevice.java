@@ -7,6 +7,7 @@ public class JsonDevice {
     public DeviceType type;
     public String brand;
     public String name;
+    public String room;
     public List<String> decorators;
 }
 

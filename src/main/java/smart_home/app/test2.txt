@@ -32,4 +32,8 @@
 {"type":"command","deviceId":"door-cam","online":true}
 {"type":"command","deviceId":"door-cam","action":"RECORD"}
 
+{"type":"room","name":"livingroom","action":"OFF"}
+{"type":"room","name":"bedroom","action":"ON"}
+{"type":"room","name":"kitchen","action":"OFF"}
+
 EXIT

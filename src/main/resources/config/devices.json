@@ -1,15 +1,16 @@
 [
-  { "type": "light", "brand": "Philips", "name": "living-light-1", "decorators": ["voice", "remote"] },
-  { "type": "light", "brand": "Philips", "name": "living-light-2", "decorators": ["voice", "remote"] },
-  { "type": "light", "brand": "Xiaomi", "name": "kitchen-light", "decorators": ["voice", "remote"] },
-  { "type": "light", "brand": "Philips", "name": "bedroom-light", "decorators": ["energy", "remote"] },
+  { "type": "light", "brand": "Philips", "name": "living-light-1", "room": "livingroom", "decorators": ["voice", "remote"] },
+  { "type": "light", "brand": "Philips", "name": "living-light-2", "room": "livingroom", "decorators": ["voice", "remote"] },
+  { "type": "light", "brand": "Xiaomi", "name": "kitchen-light", "room": "kitchen", "decorators": ["voice", "remote"] },
+  { "type": "light", "brand": "Philips", "name": "bedroom-light", "room": "bedroom", "decorators": ["energy", "remote"] },
 
-  { "type": "thermostat", "brand": "Xiaomi", "name": "hall-thermo", "decorators": ["energy"] },
-  { "type": "thermostat", "brand": "Philips", "name": "bedroom-thermo", "decorators": ["energy"] },
+  { "type": "thermostat", "brand": "Xiaomi", "name": "hall-thermo", "room": "hall", "decorators": ["energy"] },
+  { "type": "thermostat", "brand": "Philips", "name": "bedroom-thermo", "room": "bedroom", "decorators": ["energy"] },
 
-  { "type": "musicsystem", "brand": "Philips", "name": "living-music", "decorators": ["voice", "remote"] },
-  { "type": "musicsystem", "brand": "Xiaomi", "name": "bedroom-music", "decorators": ["voice"] },
+  { "type": "musicsystem", "brand": "Philips", "name": "living-music", "room": "livingroom", "decorators": ["voice", "remote"] },
+  { "type": "musicsystem", "brand": "Xiaomi", "name": "bedroom-music", "room": "bedroom", "decorators": ["voice"] },
 
-  { "type": "securitycamera", "brand": "Xiaomi", "name": "door-cam", "decorators": ["remote"] },
-  { "type": "securitycamera", "brand": "Philips", "name": "garden-cam", "decorators": ["remote", "voice"] }
+  { "type": "securitycamera", "brand": "Xiaomi", "name": "door-cam", "room": "hall", "decorators": ["remote"] },
+  { "type": "securitycamera", "brand": "Philips", "name": "garden-cam", "room": "garden", "decorators": ["remote", "voice"] },
+  { "type": "securitycamera", "brand": "Philips", "name": "living-room-cam", "room": "livingroom", "decorators": ["remote", "voice"] }
 ]

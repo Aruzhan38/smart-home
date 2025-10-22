@@ -24,8 +24,9 @@ public class RequestParser {
         String type = json.get(K_TYPE).getAsString().toLowerCase();
         return switch (type) {
             case "command" -> parseCommand(json);
-            case "mode"    -> parseMode(json);
-            default        -> throw new UnknownRequestTypeException(type);
+            case "mode" -> parseMode(json);
+            case "room" -> parseRoom(json);
+            default -> throw new UnknownRequestTypeException(type);
         };
     }
 
@@ -34,7 +35,7 @@ public class RequestParser {
         String id = json.get(K_DEVICE_ID).getAsString();
 
         String action = json.has(K_ACTION) ? json.get("action").getAsString() : null;
-        String voice  = json.has("voice")  ? json.get("voice").getAsString()  : null;
+        String voice = json.has("voice") ? json.get("voice").getAsString() : null;
         Boolean energy = json.has("energy") ? json.get("energy").getAsBoolean() : null;
         Boolean online = json.has("online") ? json.get("online").getAsBoolean() : null;
 
@@ -48,5 +49,14 @@ public class RequestParser {
     private ModeRequest parseMode(JsonObject json) {
         if (!json.has(K_NAME)) throw new InvalidRequestException("MISSING_MODE_NAME");
         return new ModeRequest(json.get(K_NAME).getAsString());
+    }
+
+    private RoomRequest parseRoom(JsonObject json) {
+        if (!json.has("name") || !json.has("action"))
+            throw new InvalidRequestException("MISSING_FIELDS_ROOM");
+        return new RoomRequest(
+                json.get("name").getAsString(),
+                json.get("action").getAsString()
+        );
     }
 }

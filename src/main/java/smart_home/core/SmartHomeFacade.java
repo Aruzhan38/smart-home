@@ -24,7 +24,7 @@ public class SmartHomeFacade {
         if (cfg == null) return;
         for (JsonDevice jd : cfg) {
             Device d = asm.build(jd);
-            registry.add(d, jd.type);
+            registry.add(d, jd.type, jd.room);
         }
         System.out.println("[Devices loaded]: " + registry.all().size());
     }
@@ -33,6 +33,28 @@ public class SmartHomeFacade {
         Map<String, List<smart_home.core.config.JsonAction>> map = new ModeConfigLoader().load(resourcePath);
         modes = new ModeService(map);
         map.forEach((k, v) -> System.out.println("[Mode loaded] " + k.substring(0,1).toUpperCase()+k.substring(1) + " (" + v.size() + " actions)"));
+    }
+
+    public void showRooms() {
+        System.out.println("\n[Rooms in system]:");
+        for (String r : registry.rooms())
+            System.out.println(" - " + r);
+    }
+
+    public void controlRoom(String roomName, String action) {
+        var devices = registry.inRoom(roomName);
+        if (devices == null || devices.isEmpty()) {
+            System.out.println("Room not found or empty: " + roomName);
+            return;
+        }
+
+        System.out.println("\n[Room] " + roomName + " -> " + action);
+        System.out.println("[Devices in room: " + roomName + "]");
+        for (Device d : devices)
+            System.out.println(" - " + d.getName());
+
+        for (Device d : devices)
+            d.operate(action);
     }
 
     public void showDevices() {
