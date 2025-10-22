@@ -14,8 +14,4 @@ public final class Capabilities {
             else return null;
         }
     }
-
-    public static <T> boolean supports(Device device, Class<T> capability) {
-        return find(device, capability) != null;
-    }
 }

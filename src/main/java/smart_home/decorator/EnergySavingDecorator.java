@@ -6,7 +6,9 @@ import smart_home.device.capabilities.SupportsEnergyMode;
 public class EnergySavingDecorator extends DeviceDecorator implements SupportsEnergyMode {
     private boolean energy = false;
 
-    public EnergySavingDecorator(Device d) { super(d); }
+    public EnergySavingDecorator(Device d) {
+        super(d);
+    }
 
     @Override
     public void toggleEnergyMode(boolean on) {

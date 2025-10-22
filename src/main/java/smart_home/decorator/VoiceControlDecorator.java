@@ -4,7 +4,9 @@ import smart_home.device.Device;
 import smart_home.device.capabilities.SupportsVoice;
 
 public class VoiceControlDecorator extends DeviceDecorator implements SupportsVoice {
-    public VoiceControlDecorator(Device d) { super(d); }
+    public VoiceControlDecorator(Device d) {
+        super(d);
+    }
 
     @Override
     public void voiceCommand(String phrase) {

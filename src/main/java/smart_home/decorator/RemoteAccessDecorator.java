@@ -6,7 +6,9 @@ import smart_home.device.capabilities.SupportsRemote;
 public class RemoteAccessDecorator extends DeviceDecorator implements SupportsRemote {
     private boolean online = true;
 
-    public RemoteAccessDecorator(Device d) { super(d); }
+    public RemoteAccessDecorator(Device d) {
+        super(d);
+    }
 
     @Override
     public void setOnline(boolean on) {

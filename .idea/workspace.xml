@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0650c769-86c0-4332-8916-3f03f522adb0" name="Changes" comment="Fourth commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/util/Capabilities.java" afterDir="false" />
+    <list default="true" id="0650c769-86c0-4332-8916-3f03f522adb0" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/test2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/core/SmartHomeFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/SmartHomeFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/CommandRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/CommandRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/ModeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/ModeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/RequestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/RequestParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/exception/InvalidRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/exception/InvalidRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/app/exception/UnknownRequestTypeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/app/exception/UnknownRequestTypeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/core/util/Capabilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/core/util/Capabilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/decorator/EnergySavingDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/decorator/EnergySavingDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/decorator/RemoteAccessDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/decorator/RemoteAccessDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/smart_home/decorator/VoiceControlDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smart_home/decorator/VoiceControlDecorator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +101,9 @@
       <workItem from="1761025812940" duration="7888000" />
       <workItem from="1761044026027" duration="3217000" />
       <workItem from="1761049016964" duration="1620000" />
-      <workItem from="1761061857818" duration="15712000" />
+      <workItem from="1761061857818" duration="15871000" />
+      <workItem from="1761114110782" duration="5298000" />
+      <workItem from="1761134235058" duration="753000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <option name="closed" value="true" />
@@ -121,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761080457463</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit">
+      <option name="closed" value="true" />
+      <created>1761082115812</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761082115812</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +147,7 @@
     <MESSAGE value="Second commit" />
     <MESSAGE value="Third commit" />
     <MESSAGE value="Fourth commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fourth commit" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
